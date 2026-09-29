@@ -2,8 +2,8 @@
 
 Data and code for a study of 12 open prompt-injection detectors on benign transactional email, synthetic benign email, and prompt-injection attacks from LLMail-Inject that triggered the target assistant's tool call.
 
-- Paper: [`paper/main.tex`](paper/main.tex) (*When Customer Notices Look Like Attacks: Register Sensitivity and Threshold Transfer in Open Prompt-Injection Classifiers*)
-- Blog post: *Your bank writes like an attacker* (Hedgerow Security Research)
+- Paper (PDF): [`paper/main.pdf`](paper/main.pdf), *When Customer Notices Look Like Attacks: Register Sensitivity and Threshold Transfer in Open Prompt-Injection Classifiers* (LaTeX source: [`paper/main.tex`](paper/main.tex))
+- Blog post: [*Your bank writes like an attacker*](https://hedgerow.dev/blog/your-bank-writes-like-an-attacker) (Hedgerow Security Research, September 2026)
 
 ## Main results
 
