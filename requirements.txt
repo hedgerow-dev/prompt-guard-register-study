@@ -1,0 +1,8 @@
+huggingface-hub==1.33.0
+matplotlib==3.11.2
+protobuf==7.36.2
+pyarrow==25.0.1
+sentencepiece==0.2.2
+tiktoken==0.14.0
+torch==2.14.0
+transformers==5.17.0

@@ -1,0 +1,163 @@
+{
+ "captured_utc": "2026-09-29T07:14:26Z",
+ "hardware": "Apple M5",
+ "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+ "python": "3.14.6",
+ "models": {
+  "protectai-v2": {
+   "hf_id": "protectai/deberta-v3-base-prompt-injection-v2",
+   "revision": "90c9989b1a342275dd0d1a95aad283c04e075671",
+   "id2label": {
+    "0": "SAFE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 813312
+  },
+  "protectai-v1": {
+   "hf_id": "protectai/deberta-v3-base-prompt-injection",
+   "revision": "373b6af0f8d16739cff5de28be326652246bfaa3",
+   "id2label": {
+    "0": "SAFE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 51022
+  },
+  "deepset": {
+   "hf_id": "deepset/deberta-v3-base-injection",
+   "revision": "80dda00d0b0d9a03917a7685e2ddbcd28e04dbb1",
+   "id2label": {
+    "0": "LEGIT",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 11633
+  },
+  "prompt-guard-2": {
+   "hf_id": "meta-llama/Llama-Prompt-Guard-2-86M",
+   "revision": "a8ded8e697ce7c355e395a0df51f94adb4a2fd27",
+   "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 119790
+  },
+  "prompt-guard-1": {
+   "hf_id": "meta-llama/Prompt-Guard-86M",
+   "revision": "1209add6ca7d9c1d815171b8e5571587fe3e7b03",
+   "id2label": {
+    "0": "BENIGN",
+    "1": "INJECTION",
+    "2": "JAILBREAK"
+   },
+   "attack_score": "1 - P(BENIGN)",
+   "downloads_30d": 3755908
+  },
+  "testsavant-base-v0": {
+   "hf_id": "testsavantai/prompt-injection-defender-base-v0",
+   "revision": "eaa1423e6fc20104b2bbd7d38015351e10efd5d9",
+   "id2label": {
+    "0": "SAFE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 400
+  },
+  "testsavant-base-v1": {
+   "hf_id": "testsavantai/prompt-injection-defender-base-v1",
+   "revision": "8670b18d795170520e5e5a8fa0249f82c8fc8305",
+   "id2label": {
+    "0": "SAFE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 36
+  },
+  "testsavant-large-v0": {
+   "hf_id": "testsavantai/prompt-injection-defender-large-v0",
+   "revision": "19bbde286abf8abef163c20222b70d137bb21455",
+   "id2label": {
+    "0": "SAFE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 4061
+  },
+  "fmops-distilbert": {
+   "hf_id": "fmops/distilbert-prompt-injection",
+   "revision": "c5da1fefd33c98c447b50dd806fe86aeb9e8c26c",
+   "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 1224
+  },
+  "devndeploy-bert": {
+   "hf_id": "devndeploy/bert-prompt-injection-detector",
+   "revision": "63bf478b076eacd6eb29a6268cf53775f33042f5",
+   "id2label": {
+    "0": "NORMAL",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 461
+  },
+  "proventra-mdeberta": {
+   "hf_id": "proventra/mdeberta-v3-base-prompt-injection",
+   "revision": "b8a89d3096cf11a71d57b283c854f5ae2ed3df83",
+   "id2label": {
+    "0": "SAFE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 3918
+  },
+  "tihilya-modernbert": {
+   "hf_id": "tihilya/modernbert-base-prompt-injection-detection",
+   "revision": "179b25b752bf2924c08c3c350155ea2e07bd84cd",
+   "id2label": {
+    "0": "LEGITIMATE",
+    "1": "INJECTION"
+   },
+   "attack_score": "P(label 1)",
+   "downloads_30d": 259
+  }
+ },
+ "data": {
+  "bipia_email_test": {
+   "file": "email_test.jsonl (BIPIA EmailQA test split)",
+   "sha256": "217b403faaa1d0cb12c24892bea39f4a0b9e2819919ac7e2b902006e28278cdb",
+   "records": 50,
+   "distinct_contexts": 44,
+   "rule": "keep first occurrence of each exact-duplicate context; no other exclusions; no parse failures (0 empty bodies)"
+  },
+  "emails_for_fp_tests.json": {
+   "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe"
+  },
+  "labelled_unique_submissions_phase2.json": {
+   "sha256": "f89af984e345430c3b357903890e30867bf4676f4ef10c138cc7bad218e890b8"
+  },
+  "attacks": {
+   "rule": "phase-2 labelled unique submissions with reason == 'api_triggered' (dataset card: the send-email API was triggered at least once for this prompt; correct destination/content not required)",
+   "count": 3165
+  }
+ },
+ "probes": {
+  "probes.py": "4f48b29afa5b8e6431728c6cf5d76b52b2cd85b54df3eabee2dbc94987852c57",
+  "probes_replication.py": "306f85a6c1167341ba589d618eea8d1a74f2ba3df29c35629940a2541540bef2"
+ },
+ "torch": "2.14.0",
+ "transformers": "5.17.0",
+ "scoring": {
+  "dtype": "float32",
+  "device": "mps (Apple GPU)",
+  "batch_size": 16,
+  "eval_mode": true,
+  "truncation": "tokenizer truncation=True, max_length=512, right-side, special tokens included in the 512",
+  "threshold_default": 0.5,
+  "determinism_check": "120 random items re-scored unbatched on CPU: max abs diff 9.5e-06, 0 verdict changes"
+ }
+}
